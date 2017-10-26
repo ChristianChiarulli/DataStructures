@@ -21,7 +21,7 @@ public class IndexNode  {
 	// it should initialize the list and set occurrences to 1
 	public IndexNode(String word, int lineNumber){
 		this.word = word;
-		this.list. add(lineNumber);
+		this.list.add(lineNumber);
 		this.occurences +=1;
 		this.left = null;
 		this.right = null;
@@ -35,7 +35,7 @@ public class IndexNode  {
 	// string must be one line
 
 	public String toString(){
-		return this.word.toString();
+		return this.word.toString() + " " + this.occurences + " " + list;
 	}
 
 

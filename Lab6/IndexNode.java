@@ -8,7 +8,7 @@ public class IndexNode  {
 	// The number of occurrences for this word
 	public int occurences;
 	// A list of line numbers for this word.
-	List<Integer> list = new ArrayList<>();
+	List<Integer> list = new LinkedList<>();
 
 
 
@@ -21,8 +21,8 @@ public class IndexNode  {
 	// it should initialize the list and set occurrences to 1
 	public IndexNode(String word, int lineNumber){
 		this.word = word;
+		this.occurences += 1;
 		this.list.add(lineNumber);
-		this.occurences +=1;
 		this.left = null;
 		this.right = null;
 

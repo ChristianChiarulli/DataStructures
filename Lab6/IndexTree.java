@@ -80,7 +80,7 @@ public class IndexTree {
 		else if(word.compareTo(root.word) == 0){
 			//item is equal to localRoot
 			root.occurences++;
-			//root.list.add(lineNumber);
+			root.list.add(lineNumber);
 			return root;
 		}
 		else if(word.compareTo(root.word) < 0){
@@ -189,7 +189,7 @@ public class IndexTree {
 				String[] words = line.split("\\s+");
 				lineNumber++;
 				for(String word : words){
-					word = word.replaceAll("[^a-zA-Z0-9]","");
+					word = word.replaceAll("[^a-z'A-Z0-9]","");
 					index.add(word);
 				}
 				//lineNumber = 0;
